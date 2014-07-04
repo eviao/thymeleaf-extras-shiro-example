@@ -4,19 +4,30 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/sec")
 public class SecController {
 	
+	@SuppressWarnings("unused")
 	private static Logger logger = LoggerFactory.getLogger(SecController.class);
+
+	@RequestMapping(value = "/guest")
+	public String guest() throws Exception {
+		return "guest";
+	}
 	
-	@RequestMapping(method = RequestMethod.GET)
-	public String sec() throws Exception {
-		
-		logger.info("into sec method()");
-		
-		return "sec";
+	@RequestMapping(value = "/user")
+	public String user() throws Exception {
+		return "user";
+	}
+	
+	@RequestMapping(value = "/authenticated")
+	public String authenticated() throws Exception {
+		return "authenticated";
+	}
+	
+	@RequestMapping(value = "/notAuthenticated")
+	public String notAuthenticated() throws Exception {
+		return "notAuthenticated";
 	}
 }
