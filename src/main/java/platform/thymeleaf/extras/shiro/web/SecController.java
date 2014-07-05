@@ -30,4 +30,39 @@ public class SecController {
 	public String notAuthenticated() throws Exception {
 		return "notAuthenticated";
 	}
+
+	@RequestMapping(value = "/hasRole")
+	public String hasRole() throws Exception {
+		return "hasRole";
+	}
+	
+	@RequestMapping(value = "/hasAnyRoles")
+	public String hasAnyRoles() throws Exception {
+		return "hasAnyRoles";
+	}
+
+	@RequestMapping(value = "/lacksRole")
+	public String lacksRole() throws Exception {
+		return "lacksRole";
+	}
+
+	@RequestMapping(value = "/hasPermission")
+	public String hasPermission() throws Exception {
+		return "hasPermission";
+	}
+
+	@RequestMapping(value = "/hasAnyPermissions")
+	public String hasAnyPermissions() throws Exception {
+		return "hasAnyPermissions";
+	}
+
+	@RequestMapping(value = "/lacksPermission")
+	public String lacksPermission() throws Exception {
+		return "lacksPermission";
+	}
+
+	@RequestMapping(value = "/principal")
+	public String principal() throws Exception {
+		return "principal";
+	}
 }
